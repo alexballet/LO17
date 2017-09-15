@@ -1,0 +1,17 @@
+<portfolio>
+	<uv>
+		<titre>LO17</titre>
+		<description>BLA</description>
+		<niveau>maîtrise</niveau>
+	</uv>
+	<uv>
+		<titre>LO23</titre>
+		<description>BLA BLA</description>
+	</uv>
+	<uv>
+		<titre>SR04</titre>
+		<niveau>bases</niveau>
+	</uv>
+</portfolio>
+
+/portfolio/uv[titre = "NF17"]/niveau

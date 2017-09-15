@@ -19,6 +19,7 @@ opendir(DIR, "BULLETINS") or die "cannot open directory BULLETINS";
 @docs = grep(/\.htm$/, readdir(DIR));
 foreach $file (@docs) {
 
+	$nb_images = 0;
 
 	print OUTPUT_FILE "<bulletin>\n";
 
@@ -96,16 +97,77 @@ foreach $file (@docs) {
 
 			print OUTPUT_FILE "<texte>";
 
-			print OUTPUT_FILE '$+{texte}';
+			if ($+{texte}) {
+
+				print OUTPUT_FILE "$+{texte}";
+
+			} else {
+
+				$line =~ qr/<p class="style96"><span class="style95">(?'texte'.*)<br \/>/;
+
+				print OUTPUT_FILE "$+{texte}";
+			}
 
 			print OUTPUT_FILE "</texte>\n";
 
 			# ------ Texte ------
+
+		} elsif ($line =~ /<\/span><div style="text-align: center"><img src="/) {
+
+			$line =~ qr/<\/span><div style="text-align: center"><img src="(?'url'.+)" border.*<br \/>/;
+
+			$images_url[$nb_images] = $+{url};
+
+			$has_found_image = 1;
+
+			next;
+
+		} elsif ($has_found_image && $line =~ /<span class="style21"><strong>/) {
+
+			$line =~ qr/<span class="style21"><strong>(?'legende'.*)<\/strong>.*$/;
+
+			$images_legende[$nb_images] = $+{legende};
 		}
 
+		if ($has_found_image) {
 
-    print OUTPUT_FILE "</bulletin>\n";
+			$has_found_image = 0;
+			$nb_images = $nb_images + 1;
+		}
 }
+
+# ------ Images ------
+
+print OUTPUT_FILE "<images>\n";
+
+if ($nb_images >= 1) {
+
+	for (my $i=0; $i <= $nb_images; $i++) {
+
+	print OUTPUT_FILE "<image>\n";
+
+	print OUTPUT_FILE "<urlImage>";
+
+	print OUTPUT_FILE "$images_url[$i]";
+
+	print OUTPUT_FILE "</urlImage>\n";
+
+	print OUTPUT_FILE "<legendeImage>";
+
+	print OUTPUT_FILE "$images_legende[$i]";
+
+	print OUTPUT_FILE "</legendeImage>\n";
+   
+    print OUTPUT_FILE "</image>\n";
+
+	}
+}
+
+print OUTPUT_FILE "</images>\n";
+
+# ------ Images ------
+
+print OUTPUT_FILE "</bulletin>\n";
 }
 
 print OUTPUT_FILE "</corpus>\n";
