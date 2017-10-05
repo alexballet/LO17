@@ -37,6 +37,8 @@ my $nb_docs = 0;
 
 my @files_word_count = ();
 
+my $i = 0;
+
 # Write some text to the file.
 open (FILE, "@ARGV") or die "Can't open '@ARGV': $!";
 
@@ -102,15 +104,13 @@ open (FILE, "@ARGV") or die "Can't open '@ARGV': $!";
 
 			}
 
-			my @file_word_count = ();
-
 			foreach $mot (keys %ind_mots) {
 
 				# print OUTPUT_FILE $fichier . " " . $mot . " " . $ind_mots{"$mot"} . "\n";
 
-				@file_word_count = qw($fichier . " " . $mot . " " . $ind_mots{"$mot"});
+				$files_word_count[$i] = $fichier . " " . $mot . " " . $ind_mots{"$mot"};
 
-				$files_word_count[$nb_docs-1] = @file_word_count;
+				$i = $i + 1;
 
 			}
 		}
@@ -123,11 +123,16 @@ open (FILE, "@ARGV") or die "Can't open '@ARGV': $!";
 				print OUTPUT_FILE2 $mot . " " . $idf . "\n";
 	}
 
-	foreach @file_word_count (@files_word_count) {
+	foreach $file_word_count (@files_word_count) {
 
-				$res = $file_word_count[2] * log($nb_docs / $coeffs{"$file_word_count[1]"})/log(10);
+				@sp = split(/ /, $file_word_count);
 
-				print OUTPUT_FILE3 $file_word_count[0] . " " . $file_word_count[1] . " " . $res . "\n";
+				$res = $sp[2] * log($nb_docs / $coeffs{"$sp[1]"})/log(10);
+
+				# if ($res <= 2) {
+
+					print OUTPUT_FILE3 $sp[0] . " " . $sp[1] . " " . $res . "\n";
+				# }
 	}
 
 
@@ -136,7 +141,11 @@ sub replace_symbols {
 
 	$accentsTxt = $_[0];
 
-	$accentsTxt =~ s/\W/ /g;
+	$accentsTxt =~ s/[[:punct:]]/ /g;
+
+	$accentsTxt =~ s/\d/ /g;
+
+	# $accentsTxt =~ s/(\b[[:alpha:]]\b){1}/ /g;
 
 	return $accentsTxt;
 }
