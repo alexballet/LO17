@@ -16,11 +16,9 @@ open(FILE2, "<", "$ARGV[1]") or die("Can't open file");
 close(FILE2);
 chomp(@significant_words);
 
-print join(" ", @significant_words);
+# print join(" ", @significant_words);
 
 my %signif_words = map { $_ => 1 } @significant_words;
-
-print $signif_words{"acteurs"};
 
 # Write some text to the file.
 open (FILE, "$ARGV[0]") or die "Can't open '$ARGV[0]': $!";
@@ -48,11 +46,13 @@ open (FILE, "$ARGV[0]") or die "Can't open '$ARGV[0]': $!";
 
 			my @del_words = ();
 
-			foreach $mot (@mots) {
+			my @mots_copie = @mots;
+
+			foreach $mot (@mots_copie) {
 
 				if(!exists($signif_words{"$mot"})) {
 
-					my @del_words = grep { $mots[$_] eq "$mot" } 0..$#mots;
+					@mots = grep {$_ ne $mot} @mots;
 				}
 			}
 
@@ -78,7 +78,13 @@ sub replace_symbols {
 
 	$accentsTxt =~ s/\d/ /g;
 
-	# $accentsTxt =~ s/(\b[[:alpha:]]\b){1}/ /g;
+	$accentsTxt =~ s/(\s\S\s){1}/ /g;
+
+	$accentsTxt =~ s/(\s\S\s){1}/ /g;
+
+	$accentsTxt =~ s/(^\S\s){1}/ /g;
+
+	$accentsTxt =~ s/(\s\S$){1}/ /g;
 
 	return $accentsTxt;
 }

@@ -147,5 +147,13 @@ sub replace_symbols {
 
 	# $accentsTxt =~ s/(\b[[:alpha:]]\b){1}/ /g;
 
+	$accentsTxt =~ s/(\s\S\s){1}/ /g;
+
+	$accentsTxt =~ s/(\s\S\s){1}/ /g;
+
+	$accentsTxt =~ s/(^\S\s){1}/ /g;
+
+	$accentsTxt =~ s/(\s\S$){1}/ /g;
+
 	return $accentsTxt;
 }
