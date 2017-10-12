@@ -50,7 +50,7 @@ open (FILE, "$ARGV[0]") or die "Can't open '$ARGV[0]': $!";
 
 			foreach $mot (@mots_copie) {
 
-				if(!exists($signif_words{"$mot"})) {
+				if(exists($signif_words{"$mot"})) {
 
 					@mots = grep {$_ ne $mot} @mots;
 				}

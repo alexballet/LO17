@@ -12,8 +12,10 @@
 #************************************************************************************************************#
 
 # $t1 = time;
-binmode(STDIN, ":utf8");
-binmode(STDOUT, ":utf8");
+use utf8;
+
+binmode(STDIN, ":encoding(utf8)");
+binmode(STDOUT, ":encoding(utf8)");
 @mots=<>;											#Extraction des mots du corpus
 $size = $#mots+1;									#Nombre de mots du corpus
 $begin_mot = 0;                                     #Initialisation de l'index des mots dont on veut calculer les successeurs (mot analysé)

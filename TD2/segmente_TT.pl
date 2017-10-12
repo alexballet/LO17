@@ -1,7 +1,8 @@
 #!/usr/bin/perl
 use utf8;
-binmode(STDIN, ":utf8");
-binmode(STDOUT, ":utf8");
+
+binmode(STDIN, ":encoding(utf8)");
+binmode(STDOUT, ":encoding(utf8)");
 for ($i=0; $i<3; $i++) { 
    if ($ARGV[0] =~ /^-[frn]$/) {
 	$opt = shift(@ARGV);

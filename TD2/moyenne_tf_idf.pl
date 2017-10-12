@@ -90,12 +90,12 @@ open (FILE, "@ARGV") or die "Can't open '@ARGV': $!";
 
 				$moy = $coeffs{"$mot"} / $occurence_mot{"$mot"};
 
-				if ($moy >= $debut_intervale && $moy <= $fin_intervale) {
+				if ($moy < $debut_intervale || $moy > $fin_intervale) {
 
 					print OUTPUT_FILE2 $mot . "\n";
 				}
 
-				if ($moy >= $stat->quantile(1) && $moy <= $stat->quantile(3)) {
+				if ($moy < $stat->quantile(1) || $moy > $stat->quantile(3)) {
 
 					print OUTPUT_FILE3 $mot . "\n";
 				}
