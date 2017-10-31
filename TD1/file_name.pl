@@ -126,13 +126,13 @@ foreach $file (@docs) {
 
 			# ------ Texte ------
 
-		} elsif ($line =~ /<\/span><div style="text-align: center"><img src="/) {
+		} elsif ($line =~ /<\/span><div.*><img src="/) {
 
 			if ($has_found_image) {
 				$nb_images = $nb_images + 1;
 			}
 
-			$line =~ qr/<\/span><div style="text-align: center"><img src="(?'url'.+)" border.*<br \/>/;
+			$line =~ qr/<\/span><div.*><img src="(?'url'.+)" border.*<br \/>/;
 
 			$images_url[$nb_images] = $+{url};
 

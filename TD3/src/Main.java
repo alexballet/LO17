@@ -27,28 +27,30 @@ public class Main {
 
                     String word = st.nextToken();
 
-                    String lemme = myLexique.getLemme(word);
+                    String lemme = myLexique.getLemme(word.toLowerCase());
 
                     if (lemme != null) {
-                        chaine = chaine.replaceAll(word, myLexique.getLemme(word));
+
+                        chaine = chaine.replaceAll(word, myLexique.getLemme(word.toLowerCase()));
+
                     } else {
 
-                        String[] possibleLemmes = myLexique.getPossibleLemmes(word);
+                        String[] possibleLemmes = myLexique.getPossibleLemmes(word.toLowerCase());
 
                         if (possibleLemmes.length != 0) {
                             System.out.print("\nVoici les lemmes candidats pour le mot " + word + " : \n");
 
-                            for (int i = 1; i < possibleLemmes.length ; i++) {
+                            for (int i = 1; i <= possibleLemmes.length ; i++) {
                                 System.out.print(i + ". " + possibleLemmes[i-1] + "\n");
                             }
 
                             while (true) {
 
                                 System.out.print("Choix ? : ");
-                                chaine = br.readLine();
+                                String choix = br.readLine();
 
                                 try {
-                                    int choice = Integer.parseInt(chaine);
+                                    int choice = Integer.parseInt(choix);
 
                                     if (choice != 0 && choice < possibleLemmes.length) {
 
@@ -66,7 +68,6 @@ public class Main {
                                 }
                             }
                         }
-
                     }
                 }
                 System.out.println(chaine);
