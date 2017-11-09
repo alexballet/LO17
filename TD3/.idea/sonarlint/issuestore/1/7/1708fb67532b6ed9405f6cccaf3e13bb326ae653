@@ -1,0 +1,10 @@
+
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(ïÇÂŒ
+Osquid:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+1squid:S1220""Move this file to a named package.
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(ýìžç
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ó“£Ñúÿÿÿÿ
+Hsquid:S2095".Close this "FileReader" in a "finally" clause.(Í¼Ìåùÿÿÿÿ

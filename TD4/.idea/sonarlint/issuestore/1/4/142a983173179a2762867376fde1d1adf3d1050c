@@ -1,0 +1,9 @@
+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Å­ËÝúÿÿÿÿ8ó™­ƒú+
+fsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ˆìÝ>8ó™­ƒú+
+Ysquid:S1197"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿ8ó™­ƒú+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Â®†Óúÿÿÿÿ8ó™­ƒú+
+8squid:S1220""Move this file to a named package.8ó™­ƒú+
+hsquid:UselessImportCheck"?Remove this unused import 'org.antlr.runtime.ANTLRInputStream'.(Û¡ç™8ó™­ƒú+

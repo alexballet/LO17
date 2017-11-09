@@ -54,7 +54,7 @@ public class Lexique {
 
     public String[] getPossibleLemmes(String word) {
 
-        String[] lemmeList = new String[100];
+        String[] lemmeList = new String[1000];
 
         int cpt = 0;
 
