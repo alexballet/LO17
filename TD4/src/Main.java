@@ -35,11 +35,11 @@ public class Main {
                     chaine = br.readLine();
                     System.out.println("j'ai saisi " + chaine);
 
-                    String[] words = chaine.split(" |[[:punct:]]");
+                    String[] words = chaine.split(" |\\s");
 
                     for (int i=0 ; i< words.length ; i++) {
 
-                        if (Arrays.asList(stopListArr).contains(words[i])) {
+                        if (Arrays.asList(stopListArr).contains(words[i].toLowerCase())) {
                             words[i] = "";
                         }
                     }

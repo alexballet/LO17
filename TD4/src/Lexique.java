@@ -30,7 +30,7 @@ public class Lexique {
                         }
                         i++;
                     }
-                    if (!lemmeHash.values().contains(value)) {
+                    if (!lemmeHash.keySet().contains(key)) {
                         lemmeHash.put(key, value);
                     }
                 }

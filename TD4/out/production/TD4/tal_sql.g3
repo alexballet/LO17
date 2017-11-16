@@ -27,16 +27,27 @@ requete returns [Arbre req_arbre = new Arbre("")]
             			{
             			req_arbre.ajouteFils(new Arbre("","titreArticle"));
             			})
-		MOT
+		((MOT
 			{
 				req_arbre.ajouteFils(new Arbre("","from titreresume"));
 				req_arbre.ajouteFils(new Arbre("","where"));
 			}
-		ps = params
-			{
-				ps_arbre = $ps.les_pars_arbre;
-				req_arbre.ajouteFils(ps_arbre);
-			}
+			ps = params
+            			{
+            				ps_arbre = $ps.les_pars_arbre;
+            				req_arbre.ajouteFils(ps_arbre);
+            			})
+		| DATE
+		{
+        				req_arbre.ajouteFils(new Arbre("","from datesparution"));
+        				req_arbre.ajouteFils(new Arbre("","where"));
+        			}
+        d = date
+        			{
+        				ps_arbre = $d.date_arbre;
+        				req_arbre.ajouteFils(ps_arbre);
+        			})
+
 ;
 
 params returns [Arbre les_pars_arbre = new Arbre("")]
@@ -60,6 +71,15 @@ params returns [Arbre les_pars_arbre = new Arbre("")]
             			})*
 ;
 
+dateparams returns [Arbre les_pars_arbre = new Arbre("")]
+	@init	{Arbre sparams_arbre, par2_arbre;} :
+	sparams = suite_params
+	{
+	    sparams_arbre = $sparams.suite_params_arbre;
+         les_pars_arbre.ajouteFils(sparams_arbre);
+	}
+;
+
 suite_params returns [Arbre suite_params_arbre  = new Arbre("")]
     @init {Arbre par1_arbre, par3_arbre;} :
     par1 = param
@@ -75,9 +95,28 @@ suite_params returns [Arbre suite_params_arbre  = new Arbre("")]
     			})*
 ;
 
-param returns [Arbre lepar_arbre = new Arbre("")] :
-	a = VAR
-		{ lepar_arbre.ajouteFils(new Arbre("mot =", "'"+a.getText()+"'"));}
+param returns [Arbre lepar_arbre = new Arbre("")]
+    @init {Arbre d_arbre;} :
+	v = VAR
+       		{ lepar_arbre.ajouteFils(new Arbre("mot =", "'"+v.getText()+"'"));}
+;
+
+date returns [Arbre date_arbre = new Arbre("")] :
+    (j = JOUR
+		{ date_arbre.ajouteFils(new Arbre("jour =", "'"+j.getText()+"'"));}
+	    m = MOIS
+        	    { date_arbre.ajouteFils(new Arbre("", "AND"));
+        	    date_arbre.ajouteFils(new Arbre("mois =", "'"+m.getText()+"'"));}
+        	    a = ANNEE
+                        	    { date_arbre.ajouteFils(new Arbre("", "AND"));
+                        	    date_arbre.ajouteFils(new Arbre("annee =", "'"+a.getText()+"'"));})
+	 | (m = MOIS
+               	    { date_arbre.ajouteFils(new Arbre("mois =", "'"+m.getText()+"'"));}
+               	    a = ANNEE
+                               	    { date_arbre.ajouteFils(new Arbre("", "AND"));
+                               	    date_arbre.ajouteFils(new Arbre("annee =", "'"+a.getText()+"'"));})
+	 | a = ANNEE
+	    { date_arbre.ajouteFils(new Arbre("annee =", "'"+a.getText()+"'"));}
 ;
 
 SELECT : 'vouloir'
@@ -87,6 +126,9 @@ ARTICLE : 'article'
 ;
 
 TITRE : 'titre'
+;
+
+CONTACT : 'contact'
 ;
 
 BULLETIN : 'bulletin'
@@ -104,8 +146,20 @@ POINT : '.'
 MOT : 'mot' | 'contenir' | 'parler'
 ;
 
+DATE : 'parution' | 'redaction'
+;
+
+JOUR 	: ('0'..'9')('0'..'9')
+;
+
+ANNEE 	: ('0'..'9')('0'..'9')('0'..'9')('0'..'9')
+;
+
+MOIS 	: 'janvier' | 'fevrier' | 'mars' | 'avril' | 'mai' | 'juin' | 'juillet' | 'aout' | 'septembre' | 'octobre' | 'novembre' | 'decembre'
+;
+
 WS  : (' ' |'\t' | '\r' | 'je' | 'qui' | 'dont') {skip();} | '\n'
 ;
 
-VAR 	: ('A'..'Z' | 'a'..'z') ('a'..'z')+
+VAR 	: ('A'..'Z' | 'a'..'z' | '0'..'9')('a'..'z')*('0'..'9')*
 ;

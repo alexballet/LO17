@@ -7,8 +7,6 @@ H
 src/Arbre.java,6/5/653c5339b1a703e571fa0d574a878176151daf58
 ;
 requete.txt,1/3/13d628fad8750e525fc992c8fe81db445ab89699
-@
-stoplist_P16.txt,3/f/3fcfb2eb23a0f3526a023fb4764fe8dca7ba576e
 C
 corpus_requetes.txt,4/7/47342f642bced070270740b5bb07575c61b2b66c
 @
@@ -23,24 +21,10 @@ C
 src/Lexique.java,d/6/d6b0ef5ad48bd7f0ec86959e956b1ce5929efc8f
 <
 src/Cat.java,1/7/1708fb67532b6ed9405f6cccaf3e13bb326ae653
-A
-src/Tal_simple.g4,4/3/43ff4de39f7db9f4b78a333073cc4fbc79d5f637
->
-src/tal_sql.g4,4/c/4ce960b56dbb42570a384e8b592f8b047137a1b0
-E
-src/tal_custom_sql.g4,4/e/4eb178a4e584fa6419335118c8120ccc98a98284
 =
 src/Main.java,9/2/924f089edb4af5ee45c8a9d1129cd28e2b368138
-G
-src/tal_sqlVisitor.java,3/c/3c7d6bb3be70a5cbe4902f36fcada007c2b1200c
-H
-src/tal_sqlListener.java,0/7/07aa787b5d19c55f6f8427af565df34870b4d9a3
-G
-src/tal_sqlLexer.tokens,7/6/765b6288a353ecb402845cb12fb813f710a4b4fc
 E
 src/tal_sqlLexer.java,4/f/4fdd2733266d45fc660d9c5b34861d64098f6a8e
-K
-src/tal_sqlBaseVisitor.java,1/9/190c2d6c88f9452fe0309c70ead8015a552ef049
 B
 src/tal_sql.tokens,8/2/825107ee381722eee3ac52aee84608c451db936c
 F
