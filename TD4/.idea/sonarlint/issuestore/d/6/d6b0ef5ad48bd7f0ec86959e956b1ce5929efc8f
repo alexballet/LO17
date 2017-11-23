@@ -1,15 +1,15 @@
 
 Osquid:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+8squid:S1220""Move this file to a named package.8–ì…å÷+
 lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç¶úÛøÿÿÿÿ
-:squid:S1659" Declare "d2" on a separate line.(ƒ†€öùÿÿÿÿ
-:squid:S1659" Declare "d3" on a separate line.(ƒ†€öùÿÿÿÿ
+Csquid:S2095".Close this "FileReader" in a "finally" clause.(Ñ¼Š
 nsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(†¡Ø¢
-lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…¥ÁÂşÿÿÿÿ
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿŠÌùÿÿÿÿ
+:squid:S1659" Declare "d3" on a separate line.(ƒ†€öùÿÿÿÿ
+:squid:S1659" Declare "d2" on a separate line.(ƒ†€öùÿÿÿÿ
 M
 squid:S106"9Replace this use of System.out or System.err by a logger.(ıìç
-Csquid:S2095".Close this "FileReader" in a "finally" clause.(Ñ¼Š
 Csquid:S1481".Remove this unused "inputFile" local variable.(Àêó¿
-lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿŠÌùÿÿÿÿ
+lsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…¥ÁÂşÿÿÿÿ
 R
 squid:S106"9Replace this use of System.out or System.err by a logger.(°ä¼Óøÿÿÿÿ
-8squid:S1220""Move this file to a named package.8–ì…å÷+

@@ -1,0 +1,32 @@
+
+1squid:S1220""Move this file to a named package.
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ñ‚‰8êí·Ãş+
+Jsquid:S2095".Close this "Connection" in a "finally" clause.(ò“å²8Œ“îÁş+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(Öîø¥8ÁÂíÁş+
+Hsquid:S1068"'Remove this unused "nom" private field.(À³õåùÿÿÿÿ8ÎèîÁş+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ïù¯¯ûÿÿÿÿ8ÁÂíÁş+
+Isquid:S1068"(Remove this unused "nbre" private field.(¤ÄÈéıÿÿÿÿ8ÎèîÁş+
+[squid:S1226"?Introduce a new variable instead of reusing the parameter "ex".(İ×å†8«„¹Ãş+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ñ‚‰8¹ìºÃş+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(…‚¦À8«„¹Ãş+
+csquid:S00101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(¾û¤Ç
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ8«„¹Ãş+
+5squid:S2068" Remove this hard-coded password.(Õ½‘Ş
+Nsquid:S2095"-Close this "ResultSet" in a "finally" clause.(ÄŒŞãûÿÿÿÿ8öæòÁş+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(¥ù‚ùÿÿÿÿ8«„¹Ãş+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8–ŠŞÃş+
+Isquid:S2095"-Close this "Statement" in a "finally" clause.(œïì”8ÁÂíÁş+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ñ®óÀ8«„¹Ãş+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(Û‚öà8êí·Ãş+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(áÓü´ÿÿÿÿÿ8«„¹Ãş+

@@ -29,8 +29,6 @@ B
 src/tal_sql.tokens,8/2/825107ee381722eee3ac52aee84608c451db936c
 F
 src/tal_sqlParser.java,6/6/66bef4e5354621f93aaccd1dfc74c7b2bbbe783d
-^
-.../../../../../../Downloads/tal_sqlParser.java,9/1/914db0be0b0256ba5aa6547aa64eba63a0919b47
 E
 src/tal_custom_sql.g3,2/6/2625104bd7d203e78089083b8a74a9f5493273a4
 D
@@ -39,3 +37,9 @@ A
 src/Tal_simple.g3,d/d/ddf544d4947647d035b58b55d8ea9a7d8529dc23
 >
 src/tal_sql.g3,8/8/88a3cddedbaf191d4431e2790020509acfb88757
+K
+src/interrogPostgresql.java,a/e/ae3bae91ff25e20a98d7fc9a131f225136b27eb2
+?
+filtronc_P16.pl,b/4/b4d98d78dd37a5ba69a5ab4dfa868288c6508426
+H
+src/filtreCorpus_P16.txt,3/b/3b848ab4ee0e14cefc27a014d60a1dac2c81b6ce

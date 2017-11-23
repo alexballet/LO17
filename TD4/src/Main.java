@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println("Hello World!");
 
-        Lexique myLexique = new Lexique("/Users/alex/Documents/Cours UTC/GI05/LO17/LO17_git/TD4/src/lexique_sql.txt");
+        Lexique myLexique = new Lexique("/Users/alex/Documents/Cours UTC/GI05/LO17/LO17_git/TD4/src/filtreCorpus_P16.txt");
 
         Scanner sc = null;
         try {
@@ -35,7 +35,7 @@ public class Main {
                     chaine = br.readLine();
                     System.out.println("j'ai saisi " + chaine);
 
-                    String[] words = chaine.split(" |\\s");
+                    String[] words = chaine.split("\\s|[.!?\\-’”]");
 
                     for (int i=0 ; i< words.length ; i++) {
 
@@ -44,12 +44,16 @@ public class Main {
                         }
                     }
 
-                    chaine = String.join(" ", words) + ".";
+                    chaine = String.join(" ", words);
 
                     StringTokenizer st = new StringTokenizer(chaine);
                     while (st.hasMoreTokens()) {
 
                         String word = st.nextToken();
+
+                        if (word.matches("\\d+")) {
+                            continue;
+                        }
 
                         String lemme = myLexique.getLemme(word.toLowerCase());
 
@@ -101,6 +105,7 @@ public class Main {
                             }
                         }
                     }
+                    chaine = chaine + ".";
                     System.out.println(chaine);
                     Scanner scanner = new Scanner(chaine);
                     String s = scanner.nextLine();
@@ -109,7 +114,13 @@ public class Main {
                         CommonTokenStream tokens = new CommonTokenStream(lexer);
                         tal_sqlParser parser = new tal_sqlParser(tokens);
                         String arbre = parser.listerequetes();
+                        //arbre = arbre.replaceAll("\\(|\\)","");
+                        arbre = arbre.replaceAll("\\s{2,}"," ");
                         System.out.println(arbre);
+
+                        interrogPostgresql sqlInterrog = new interrogPostgresql();
+                        sqlInterrog.requestDatabase(arbre);
+
                     } catch (Exception e) {
                     }
                 } catch (EOFException e) {

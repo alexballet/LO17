@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="dblo17@tuxa.sme.utc" uuid="c0838644-ba2f-45fb-a325-fa8ab55038d2">
+      <database-info product="PostgreSQL" version="9.3.6" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>lo17xxx</user-name>
+      <introspection-schemas>dblo17:public</introspection-schemas>
+    </data-source>
+  </component>
+</project>
