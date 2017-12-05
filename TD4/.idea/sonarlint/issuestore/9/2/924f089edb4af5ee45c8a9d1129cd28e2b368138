@@ -1,0 +1,39 @@
+
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÜÈıº8ŸäÚâ€,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(´ÍÎ8ŸäÚâ€,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(²€¡¤8ŸäÚâ€,
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÀŠı”8ŸäÚâ€,
+nsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 59 to the 15 allowed.(Çµí‘8ŸäÚâ€,
+Lsquid:S2095"+Close this "Scanner" in a "finally" clause.(Û’‰ûÿÿÿÿ8ŸäÚâ€,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ıìç8ŸäÚâ€,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(¾¹—8ŸäÚâ€,
+Lsquid:S2095"+Close this "Scanner" in a "finally" clause.(ã¼Ù—ÿÿÿÿÿ8ŸäÚâ€,
+Vsquid:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ŸäÚâ€,
+Csquid:S2189""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8ŸäÚâ€,
+bsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(ã¼Ù—ÿÿÿÿÿ8ŸäÚâ€,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ö•ß–øÿÿÿÿ8ŸäÚâ€,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(½¦ÿÿÿÿÿ8ŸäÚâ€,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(¹ƒÚışÿÿÿÿ8ŸäÚâ€,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(ó“£Ñúÿÿÿÿ8ŸäÚâ€,
+8squid:S1643"Use a StringBuilder instead.( ÀÊ„8ŸäÚâ€,
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ŸäÚâ€,
+Vsquid:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ŸäÚâ€,
+Fsquid:S00108")Either remove or fill this block of code.(”ı¾8ŸäÚâ€,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ü—á„8ŸäÚâ€,
+Vsquid:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8ŸäÚâ€,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(åè½ãÿÿÿÿÿ8ŸäÚâ€,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(¾­ÀÖùÿÿÿÿ8ŸäÚâ€,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(ÏÛÒğ8ŸäÚâ€,
+8squid:S1220""Move this file to a named package.8ŸäÚâ€,

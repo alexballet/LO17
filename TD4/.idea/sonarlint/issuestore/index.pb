@@ -43,3 +43,15 @@ K
 filtronc_P16.pl,b/4/b4d98d78dd37a5ba69a5ab4dfa868288c6508426
 H
 src/filtreCorpus_P16.txt,3/b/3b848ab4ee0e14cefc27a014d60a1dac2c81b6ce
+M
+../LO17-TD5/web/FormLeft.html,6/c/6c12ca943720839329694cbc9f99852b4f097af1
+I
+WEB-INF/LanceRequete.html,3/8/38f2edbdc9c2546694c90ebd314fe8d6a0bdcdda
+7
+web.xml,8/8/883ff21824d1a24fbb42f58b1e145b46d304d8b2
+9
+	xform.xsl,b/8/b81f8332338285614e9c7c60023c27a287384fdb
+@
+LanceRequete.txt,3/a/3a7c09a0d47bcec1a4963348bd972d8b7b7467c0
+?
+WEB-INF/web.xml,d/3/d397b5b1c87b1434c8aec62c7495824ec5f24103

@@ -33,3 +33,9 @@ inc/
 /MANIFEST.bak
 /pm_to_blib
 /*.zip
+LO17-TD5/.idea
+LO17-TD5/apache-tomcat-6.0.37/*
+TD4/.idea
+TD4/apache-tomcat-6.0.37/*
+TD4/WEB-INF/*
+LO17-TD5/out
